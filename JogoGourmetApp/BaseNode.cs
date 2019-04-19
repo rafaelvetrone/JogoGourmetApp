@@ -10,10 +10,7 @@ namespace JogoGourmetApp
     {     
         public abstract string PratoNome { get; set; }
 
-        public abstract BaseNode PratoParentNode { get; set; }
-
-        //public abstract BaseNode PratoNodePositivo { get; set; }
-        //public abstract BaseNode PratoNodeNegativo { get; set; }        
+        public abstract BaseNode PratoParentNode { get; set; }  
 
         public abstract bool Perguntar();
     }

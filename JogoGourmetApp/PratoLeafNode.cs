@@ -29,6 +29,8 @@ namespace JogoGourmetApp
             string text = string.Format(PRATO_QUE_PENSOU, PratoNome);
             DialogResult dr = MessageBox.Show(text, JogoGourmet.TITULO, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             
+            //se é um nó folha e a resposta é sim, acertou.
+            //caso contrário pergunta qual o novo prato e reorganiza os nós
             if (dr == DialogResult.Yes)
                 return true;
             else

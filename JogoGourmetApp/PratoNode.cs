@@ -14,7 +14,9 @@ namespace JogoGourmetApp
         public override string PratoNome { get; set; }            
 
         public override BaseNode PratoParentNode { get; set; }
+        //representa o lado esquerdo da árvore
         public BaseNode PratoNodePositivo { get; set; }
+        //lado direito
         public BaseNode PratoNodeNegativo { get; set; }
 
         public PratoNode(string prato)
@@ -38,6 +40,8 @@ namespace JogoGourmetApp
             string text = string.Format(PRATO_QUE_PENSOU, PratoNome);
             DialogResult dr = MessageBox.Show(text, JogoGourmet.TITULO, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            //SIM invoca a pergunta do lado esquerdo (reposta positiva)
+            //caso contrário invoca pergunta do lado direito (negativo)
             if(dr == DialogResult.Yes)
             {                
                 return PratoNodePositivo.Perguntar();                
