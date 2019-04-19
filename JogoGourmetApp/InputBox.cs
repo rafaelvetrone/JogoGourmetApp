@@ -6,6 +6,14 @@ namespace JogoGourmetApp
 {
     class InputBox
     {
+        /// <summary>
+        /// InputBox para C#.
+        /// http://www.csharp-examples.net/inputbox/
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="promptText"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static DialogResult Show(string title, string promptText, ref string value)
         {
             Form form = new Form();
